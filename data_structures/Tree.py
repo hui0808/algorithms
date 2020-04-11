@@ -1,4 +1,4 @@
-from typing import Optional, Iterable, Union
+from typing import Iterable, Union
 
 
 class Node(object):
@@ -119,6 +119,11 @@ class Tree(object):
     def toleft(self, item, root):
         return item > root
 
+    def __contains__(self, item):
+        return self.find(item)
+
+    def __iter__(self):
+        yield from self.iter()
 
 if __name__ == '__main__':
     t = Tree([1, 7, 2, 9, 6])

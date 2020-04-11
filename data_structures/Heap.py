@@ -1,4 +1,4 @@
-from List import List
+from data_structures.List import List
 
 
 class Heap(List):
